@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "closure #1 in ChatViewController.retrieveMessages():ChatViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.messageArray">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in ChatViewController.viewDidLoad():ChatViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.messageTableView.numberOfRows(inSection: 0) - 1">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in closure #1 in ChatViewController.retrieveMessages():ChatViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.messageTableView.numberOfRows(inSection: 0) - 1">
+            </PersistentString>
+            <PersistentString
+               value = "self.messageArray">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

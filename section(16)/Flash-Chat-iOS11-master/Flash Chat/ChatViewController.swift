@@ -38,7 +38,7 @@ class ChatViewController: UIViewController ,UITableViewDelegate , UITableViewDat
         
         
         //TODO: Set yourself as the delegate of the text field here:
-messageTextfield.delegate = self
+        messageTextfield.delegate = self
         
         
         //TODO: Set the tapGesture here:
@@ -107,17 +107,17 @@ messageTextfield.delegate = self
 //    func scrollViewWillBeginDragging(scrollView: UIScrollView) {
 //        self.lastContentOffset = scrollView.contentOffset.y
 //    }
-    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
-
-
-        if targetContentOffset.pointee.y < scrollView.contentOffset.y {
-            targetContentOffset.pointee.y = scrollView.contentOffset.y
-        } else {
-            // it's going down
-        }
-
-    }
-    
+//    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+//
+//
+//        if targetContentOffset.pointee.y < scrollView.contentOffset.y {
+//            targetContentOffset.pointee.y = scrollView.contentOffset.y
+//        } else {
+//            // it's going down
+//        }
+//
+//    }
+//
     //TODO: Declare numberOfRowsInSection here:
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return messageArray.count
@@ -162,7 +162,7 @@ messageTextfield.delegate = self
             self.view.layoutIfNeeded()}
     }
     
-    ///////////////////////////////////////////
+    /////////////////////////////////////////
     
     
     //MARK: - Send & Recieve from Firebase
@@ -213,7 +213,7 @@ messageTextfield.delegate = self
 
             
             self.messageTableView.reloadData()
-            
+           
             UIView.animate(withDuration: 0.0, delay: 0.3, options: .curveEaseInOut, animations: {
                 self.messageTableView.scrollToRow(at: IndexPath(row: self.messageTableView.numberOfRows(inSection: 0) - 1, section: 0), at: .bottom, animated: true)
             })

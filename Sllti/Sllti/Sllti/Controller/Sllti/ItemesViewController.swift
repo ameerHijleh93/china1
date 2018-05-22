@@ -10,6 +10,8 @@ import UIKit
 
 class ItemesViewController: UIViewController /*,UICollectionViewDelegate , UICollectionViewDataSource*/ {
     @IBOutlet weak var itemsCoolectionView: UICollectionView!
+    @IBOutlet weak var myView: UICollectionView!
+
 //    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
 //        return 10
 //    }
@@ -29,7 +31,7 @@ class ItemesViewController: UIViewController /*,UICollectionViewDelegate , UICol
 //       itemsCoolectionView.delegate = self
 //        itemsCoolectionView.dataSource = self
 
-       
     }
 
+    
 }

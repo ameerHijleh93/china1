@@ -32,10 +32,11 @@ class MainDealsViewPager: UIViewController {
     private func setupPager() {
         viewPager.dataSource = self
         //viewPager.animationNext()
+        viewPager.pageControl.isHidden = true
     }
     
     private func setupSliderImages(){
-        sliderImagesObj = ["lion","ic_dialog_location","lion"]
+        sliderImagesObj = ["lion","lion","lion"]
     }
     
 }
@@ -64,7 +65,7 @@ extension MainDealsViewPager: ViewPagerDataSource{
             // imageView.sd_setImage(with: URL(string: (RealmService.SharedInstans.selectSliderImages().filter {$0.id == sliderImagesObj[index].id}.first?.imgUrl)!) )
             
             imageView.image = UIImage(named: sliderImagesObj[index])
-            imageView.contentMode = .scaleAspectFill
+            imageView.contentMode = .scaleAspectFit
             imageView.clipsToBounds = true
             
             // Add to view

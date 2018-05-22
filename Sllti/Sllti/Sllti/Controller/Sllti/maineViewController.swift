@@ -9,16 +9,35 @@
 import UIKit
 
 class maineViewController: UIViewController , UICollectionViewDataSource , UICollectionViewDelegate {
+    @IBOutlet weak var collectionTwo: UICollectionView!
+    @IBOutlet weak var collection: UICollectionView!
+   
+
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+            if collection.tag == 0 {
         return 20
+            } else {
+                return 5 }
     }
-    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        if collection.tag == 0 {
         let cell = collection.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! marketsCollectionViewCell
         //cell.marketImage = UIImage(named: "lion")
         cell.marktsImage.image = UIImage(named: "lion")
-        return cell
-    }
+            return cell }
+//        else{
+//            let celll = collectionTwo.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! marketsImageCollectionViewCell
+//            //cell.marketImage = UIImage(named: "lion")
+//            celll.imge.image = UIImage(named: "ic_no_wifi")
+//            return celll
+//        }
+   
+        let cell = collection.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! marketsCollectionViewCell
+        //cell.marketImage = UIImage(named: "lion")
+        cell.marktsImage.image = UIImage(named: "lion")
+        return cell }
+        
+    
     
     
 //    func collectionView(_ collectionView: UICollectionView,
@@ -30,12 +49,14 @@ class maineViewController: UIViewController , UICollectionViewDataSource , UICol
 //            return CGSizeMake(123, 123);
 //        }
     
-    @IBOutlet weak var collection: UICollectionView!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         collection.dataSource = self
         collection.delegate = self
+        collectionTwo.dataSource = self
+        collectionTwo.delegate = self
       
     }
 
@@ -47,7 +68,7 @@ class maineViewController: UIViewController , UICollectionViewDataSource , UICol
 
   
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAtIndex section: Int) -> CGFloat {
-        return 100;
+        return 600;
     }
    
 }
